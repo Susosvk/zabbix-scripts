@@ -4,13 +4,13 @@
 PKIIDENTITY=$RANDOM
 PSKKEY=$(openssl rand -hex 32)
 DEBIANVERSION=$(cat /etc/debian_version)
-ZABBIXHOST=""
+ZABBIXHOST="10.4.128.93"
 
 # Get hostname of Zabbix-Server
-if [ -z "$ZABBIXHOST" ]; then
-        echo -n "==> Please input the hostname of your Zabbix Monitoring Server... [zabbix.example.org]: "
-        read -r ZABBIXHOST
-fi
+#if [ -z "$ZABBIXHOST" ]; then
+#        echo -n "==> Please input the hostname of your Zabbix Monitoring Server... [zabbix.example.org]: "
+#        read -r ZABBIXHOST
+#fi
 
 # Get Debian version
 if [[ $DEBIANVERSION == *"10"* ]]; then
