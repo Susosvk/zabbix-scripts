@@ -35,7 +35,6 @@ PidFile=/var/run/zabbix/zabbix_agentd.pid
 LogFile=/var/log/zabbix/zabbix_agentd.log
 LogFileSize=0
 Server=$ZABBIXHOST
-ServerActive=$ZABBIXHOST
 Hostname=$(hostname -f)
 Include=/etc/zabbix/zabbix_agentd.d/*.conf
 TLSConnect=psk
