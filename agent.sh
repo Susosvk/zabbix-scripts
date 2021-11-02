@@ -13,7 +13,9 @@ ZABBIXHOST="10.4.128.93"
 #fi
 
 # Get Debian version
-if [[ $DEBIANVERSION == *"10"* ]]; then
+if [[ $DEBIANVERSION == *"11"* ]]; then
+        wget -q https://repo.zabbix.com/zabbix/5.4/debian/pool/main/z/zabbix-release/zabbix-release_5.4-1+debian11_all.deb -O /tmp/zabbix.deb
+elif [[ $DEBIANVERSION == *"10"* ]]; then
         wget -q https://repo.zabbix.com/zabbix/5.4/debian/pool/main/z/zabbix-release/zabbix-release_5.4-1%2Bdebian10_all.deb -O /tmp/zabbix.deb
 elif [[ $DEBIANVERSION == *"9"* ]]; then
         wget -q https://repo.zabbix.com/zabbix/5.4/debian/pool/main/z/zabbix-release/zabbix-release_5.4-1%2Bdebian9_all.deb -O /tmp/zabbix.deb
